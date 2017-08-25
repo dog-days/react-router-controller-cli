@@ -1,7 +1,10 @@
 {
   "name": "react-router-controller-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
+  "bin": {
+    "react-router-controller-cli": "./bin/index.js"
+  },
   "main": "bin/index.js",
   "dependencies": {
     "chalk": "^2.1.0",
