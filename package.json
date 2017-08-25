@@ -1,0 +1,84 @@
+{
+  "name": "react-router-controller-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0",
+    "fs-extra": "^4.0.1",
+    "node-xlsx": "^0.10.0",
+    "react-boilerplate-app-utils": "0.0.13"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.2",
+    "prettier": "^1.3.1",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-boilerplate-app-scripts": "^0.1.1",
+    "react-router-controller": "0.1.0"
+  },
+  "scripts": {
+    "start-demo": "react-boilerplate-app-scripts start",
+    "build-demo": "react-boilerplate-app-scripts build",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint -c ./.react-router-controller-cli-eslintrc --no-eslintrc",
+      "prettier --trailing-comma es5 --single-quote --write './*/*(*.js)'",
+      "git add"
+    ]
+  },
+  "react-boilerplate-app-scripts": {
+    "language": "zh_CN",
+    "appLocalePath": "${src}/i18n",
+    "appSrcPath": "demo/src",
+    "appPublicPath": "demo/public"
+  },
+  "react-router-controller": {
+    "language": "zh_CN",
+    "appSrcPath": "demo/src",
+    "appLocalePath": "demo/src/i18n"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ],
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-runtime"
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          "react-hot-loader/babel",
+          "transform-runtime"
+        ]
+      }
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dog-days/react-router-controller-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dog-days/react-router-controller-cli/issues"
+  },
+  "homepage": "https://github.com/dog-days/react-router-controller-cli#readme"
+}
